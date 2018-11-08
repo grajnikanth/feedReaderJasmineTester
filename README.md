@@ -24,7 +24,7 @@ I learnt how to use Jasmine to write a number of tests against a pre-existing ap
 * Good tests give you the ability to quickly analyze whether new code breaks an existing feature within your codebase, without having to manually test all of the functionality.
 
 
-# How I completed this project?
+## How I completed this project?
 
 Reviewed the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/projects/3442558598/rubric)
 
@@ -48,7 +48,7 @@ Reviewed the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/
 18. Callbacks were used to ensure that feeds are loaded before they are tested.
 19. All of my tests are passing. 
 
-# How to run the program?
+## How to run the program?
 1. Download or clone the reporsitory.
 2. Go to the feedreader.js file located in /jasmine/spec/ folder
 3. All the tests written are located in this .js file
