@@ -58,6 +58,8 @@ $(function() {
 
 
     /* TODO: Write a new test suite named "The menu" */
+    // The menu test will contain multiple tests to check the proper functionality
+    // of the menu item located on the top left corner of the web page.
     describe('The menu', function(){
 
       /* TODO: Write a test that ensures the menu element is
@@ -65,13 +67,14 @@ $(function() {
        * the CSS to determine how we're performing the
        * hiding/showing of the menu element.
        */
-       // access the html element collection containing the class = menu-hidden.
-       // using the getElementsByClassName() function.
-       // in this case the first element of this collection shall be Truthy if by
-       // default menu-hidden is assigned as the class name.
+       // access the html element collection with tag name "body"
+       // using the getElementsByTagName() function.
+       // in this case the first element of this collection will be checked to
+       // see if it contains a class = menu-hidden. If it is true, the test
+       // will pass.
        it('menu element is hidden by default', function(){
-         let menuBody = document.getElementsByClassName('menu-hidden');
-         expect(menuBody[0]).toBeTruthy();
+         let menuBody = document.getElementsByTagName('body');
+         expect(menuBody[0].classList.contains('menu-hidden')).toBe(true);
        });
 
        /* TODO: Write a test that ensures the menu changes
@@ -92,11 +95,11 @@ $(function() {
         it('menu changes visibility on clicking', function() {
           let menuIcon = document.getElementsByClassName('menu-icon-link');
           menuIcon[0].click();
-          let menuBody = document.getElementsByClassName('menu-hidden');
-          expect(menuBody[0]).toBeFalsy();
+          let menuBody = document.getElementsByTagName('body');
+          expect(menuBody[0].classList.contains('menu-hidden')).not.toBe(true);
           menuIcon[0].click();
-          menuBody = document.getElementsByClassName('menu-hidden');
-          expect(menuBody[0]).toBeTruthy();
+          menuBody = document.getElementsByTagName('body');
+          expect(menuBody[0].classList.contains('menu-hidden')).toBe(true);
         });
     });
 
@@ -139,15 +142,12 @@ $(function() {
        // verify they are not equal for the test.
        let firstFeed, secondFeed; // variables to store the div.feed innerText for the feeds loaded.
        beforeEach(function(done) {
-         loadFeed(1, function(){
+         loadFeed(0, function(){
            firstFeed = document.querySelector('div.feed').innerText;
-           console.log(firstFeed);
-         });
-
-         loadFeed(2, function(){
-           secondFeed = document.querySelector('div.feed').innerText;
-           console.log(secondFeed);
-           done();
+           loadFeed(1, function(){
+             secondFeed = document.querySelector('div.feed').innerText;
+             done();
+           });
          });
        });
 
