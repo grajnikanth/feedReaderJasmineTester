@@ -87,11 +87,11 @@ $(function() {
         // once selected use the click() function on this html element to
         // simulate a mouse click.
         // now the app.js program must remove the menu-hidden to make this menu
-        // visible. So check if an element has the menu-hidden class. If it
+        // visible. So check if the body element has the menu-hidden class. If it
         // is null then the test has passed.
 
         // now use the click() function again to reverse the above steps.
-        // check if the element which has class = menu-hidden is truthy
+        // check if the element body now does not have a class = menu-hidden
         it('menu changes visibility on clicking', function() {
           let menuIcon = document.getElementsByClassName('menu-icon-link');
           menuIcon[0].click();
