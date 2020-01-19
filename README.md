@@ -1,4 +1,4 @@
-# FeedReader Jasmine Tester
+# Feed Reader Jasmine Tester
 Udacity Front End Web Developer Project 4 - Feed Reader Testing
 
 # Project Overview
