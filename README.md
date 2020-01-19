@@ -3,7 +3,7 @@ Udacity Front End Web Developer Project 4 - Feed Reader Testing
 
 # Project Overview
 
-This is project 4 of the udacity Front End Web Developer Nanodegree. In this project we were given a web-based application that reads RSS feeds. I had to write tests using [Jasmine](http://jasmine.github.io/) to verify the code is working as intended.
+This is project 4 of the Udacity Front End Web Developer Nanodegree. In this project we were given a web-based application that reads RSS feeds. I had to write tests using [Jasmine](http://jasmine.github.io/) to verify the code is working as intended.
 
 
 ## What I learned?
